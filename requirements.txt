@@ -6,7 +6,7 @@ face-recognition-models==0.3.0
 Flask==1.1.2
 Flask-RESTful==0.3.8
 Flask-SocketIO==4.3.1
-opencv-contrib-python==4.4.0.42
+opencv-contrib-python==4.4.0.44
 gunicorn==19.9.0
 Jinja2==2.10.1
 MarkupSafe==1.1.1
