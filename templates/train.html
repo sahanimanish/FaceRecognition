@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Get User Media Code Along!</title>
+  
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/train_style.css')}}"  type="text/css" media="all">
+</head>
+<body>
+
+  <div class="photobooth">
+    <div class="container">
+      <div class="video-container">
+        <video class="player"></video>
+        <button onClick="takePhoto()" class="btn" id="btn-cap">Capture Photo</button>
+        <a href="/" class="btn">Back</a>
+
+      </div>
+      
+
+    </div>
+    <div class="img-container">
+      <div class="strip">
+        <div class="bouncingLoader">
+          <div></div>
+        </div>
+        <div class="img_container"></div>
+      </div>
+      <div class="inp_container">
+        <input type="text" name="name" class="inp_name" id="inp" placeholder="Enter your name" required>
+        <input type="button" value="Train" class="inp_name btn" onclick="send_data_to_server()">
+      </div>
+    </div>
+    
+
+  
+    
+    
+   
+  </div>
+  <canvas class="photo"></canvas>
+
+  <!-- <audio class="snap" src="./snap.mp3" hidden></audio> -->
+
+  <script src="{{ url_for('static', filename='js/train_scripts.js') }}"></script>
+
+</body>
+</html>

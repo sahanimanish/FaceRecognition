@@ -1,0 +1,139 @@
+html {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  
+  html {
+    font-size: 10px;
+    background: #f2f2f2;
+  }
+  
+  .photobooth {
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+
+  }
+  
+  a{
+    text-decoration: none;
+    text-align: center;
+  }
+  
+  .photo {
+    width: 100%;
+    float: left;
+    display: none;
+  }
+  
+  .player {
+    /* position: absolute;
+    top: 20px;
+    right: 20px; */
+    width:100%;
+  }
+  
+  /*
+    Strip!
+  */
+
+  .video-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 400px;
+    padding: 3rem;
+  }
+  
+  .strip {
+    padding: 2rem;
+    height: 400px;
+    overflow-y: scroll; 
+    text-align: center;
+  } 
+
+  .img-container{
+    width: 100%;
+  }
+  
+  .strip img {
+    width: 350px;
+    height: 300px;
+    margin: 10px;
+    overflow-x: scroll;
+    padding: 0.8rem 0.8rem 2.5rem 0.8rem;
+    box-shadow: 0 0 3px rgba(0,0,0,0.2);
+    background: white;
+  }
+  .inp_container{
+      padding: 2rem;
+  }
+  .inp_name{
+      width: 100%;
+      padding: 10px;
+      margin: 5px;
+      
+  }
+
+  
+
+  .btn{
+      cursor: pointer;
+      border: none;
+      font-size: 18px;
+      margin-top: 10px;
+      padding: 12px 24px;
+      background-color:rgb(80, 80, 230);
+      width: 100%;
+      border-radius: 5px;
+      color: white;
+  }
+
+  .btn:hover{
+      outline-width: 2px;
+  }
+  
+
+  .bouncingLoader > div, .bouncingLoader:before, .bouncingLoader:after {
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    background: hsl(243, 80%, 62%);
+    margin-bottom: -5px;
+    border-radius: 50%;
+    animation: bouncing-loader 0.6s infinite alternate;
+}
+
+.bouncingLoader > div, .bouncingLoader:before, .bouncingLoader:after {
+    content: "";
+}
+
+.bouncingLoader > div {
+    margin: 0 5px;
+}
+
+.bouncingLoader > div {
+    animation-delay: 0.2s;
+}
+
+.bouncingLoader:after {
+    animation-delay: 0.4s;
+}
+
+@keyframes bouncing-loader {
+    to {
+        opacity: 0.1;
+        transform: translate3d(0, -16px, 0);
+    }
+}
+
+.bouncingLoader{
+  margin-top: 100px;
+  display: none;
+}

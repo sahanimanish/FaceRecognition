@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .player {
+        display: none;
+      }
+    </style>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}"  type="text/css" media="all">
+  </head>
+  <body>
+
+    <section class="showcase">
+        <div class="video-container">
+            <video src="{{url_for('static', filename='assets/bc-video.mp4')}}" autoplay muted loop></video>
+            <!-- <video src="/assets/bc-video.mp4" autoplay muted loop></video> -->
+        </div>
+        <div class="content">
+            <h1>Welcome to FaceRec</h1>
+            <h3>FaceRec is Browser based face recognition system</h3>
+            <a href="#recognize" class="btn">Recognize</a>
+            <a href="/train" class="btn btn-2">Train</a>
+        </div>
+    </section>
+  <div class="container">
+
+    <h1>Live streming from server</h1>
+    <video class="player"></video>
+    <canvas class="photo"></canvas>
+    <div class="btn-container">
+      <button onClick="getVideo()" class="btn btn-cam">Turn on Camera</button>
+      <button onClick="stopVideo()" class="btn btn-cam">Stop</button>
+    </div>
+    
+    <img src="{{ url_for('video_feed') }}" alt="streming video" class="img" id="recognize"/>
+  </div>
+    
+
+    <script src="{{ url_for('static', filename='js/socket.io.slim.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+  </body>
+</html>
