@@ -3,8 +3,8 @@ const canvas = document.querySelector('.photo');
 const ctx = canvas.getContext('2d');
 
 namespace = '/live'; 
-// console.log('http://' + document.domain + ':' + location.port + namespace);
-var socket = io.connect('http://' + document.domain + namespace);
+console.log('https://' + document.domain + namespace);
+var socket = io.connect('https://' + document.domain + namespace);
 
 socket.on('connect', function () {
   console.log('connection event');
