@@ -66,10 +66,10 @@ async function send_data_to_server(){
     },
     body: JSON.stringify(data)
   };
-  const res = await fetch('http://' + document.domain+'/api/train', options);
+  const res = await fetch('https://' + document.domain+'/api/train', options);
   const json = await res.json();
   alert(json.result)
-  window.location.assign('http://' + document.domain)
+  window.location.assign('https://' + document.domain)
 }
 
 video.addEventListener('canplay', paintToCanvas);
