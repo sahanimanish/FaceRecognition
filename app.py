@@ -94,6 +94,6 @@ def video_feed():
                     mimetype='multipart/x-mixed-replace; boundary=frame')
 
 if __name__ == '__main__':
-    # socketio.run(app, host = 'localhost', port = 5000,debug=True)
-    app.run()
+    socketio.run(app)
+#     app.run()
 
