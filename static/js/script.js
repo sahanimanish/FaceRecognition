@@ -4,7 +4,9 @@ const ctx = canvas.getContext('2d');
 
 namespace = '/live'; 
 console.log('https://' + document.domain + namespace);
-var socket = io.connect('https://' + document.domain + namespace);
+// var socket = io.connect('https://' + document.domain + namespace);
+var socket = io.connect(location.protocol + '//' + document.domain + ':' + location.port + namespace);
+console.log(location.protocol + '//' + document.domain + ':' + location.port);
 
 socket.on('connect', function () {
   console.log('connection event');
