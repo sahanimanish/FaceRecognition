@@ -94,6 +94,7 @@ def video_feed():
                     mimetype='multipart/x-mixed-replace; boundary=frame')
 
 if __name__ == '__main__':
-    socketio.run(app)
+    socketio.run(app, host = 'facerecb.herokuapp.com')
+#     socketio.run(app)
 #     app.run()
 
